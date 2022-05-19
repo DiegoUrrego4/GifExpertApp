@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en GifGrid Debe de mostrar el componente correctamente 1`] = `
+exports[`Tests in GifGrid The component must be displayed correctly 1`] = `
 <Fragment>
   <h3
     className="animate__animated animate__fadeInRight"

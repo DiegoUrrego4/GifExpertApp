@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme/build';
 import AddCategory from '../../components/AddCategory';
 
-describe('Pruebas en AddCategory', () => {
+describe('Tests in AddCategory', () => {
   const setCategories = jest.fn();
   let wrapper;
 
@@ -11,11 +11,11 @@ describe('Pruebas en AddCategory', () => {
     wrapper = shallow(<AddCategory setCategories={setCategories} />);
   });
 
-  test('Debe de mostrarse correctamente', () => {
+  test('It must be displayed correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  test('Debe de cambiar la caja de texto', () => {
+  test('It must change the text box', () => {
     const input = wrapper.find('input');
     const value = 'Hola Mundo';
     input.simulate('change', { target: { value } });
@@ -23,12 +23,12 @@ describe('Pruebas en AddCategory', () => {
     expect(p.text().trim()).toBe(value);
   });
 
-  test('NO debe de postear la información onsubmit', () => {
+  test('It should NOT post the information onsubmit.', () => {
     wrapper.find('form').simulate('submit', { preventDefault() {} });
     expect(setCategories).not.toHaveBeenCalled();
   });
 
-  test('Debe de llamar el setCategories y limpiar la caja de texto', () => {
+  test('It should call the setCategories and clear the text box', () => {
     // 1. Simular el inputChange
     const value = 'One Piece';
     const input = wrapper.find('input');

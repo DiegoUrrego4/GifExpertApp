@@ -6,10 +6,10 @@ import GifGrid from '../../components/GifGrid';
 
 jest.mock('../../hooks/useFetchGifs');
 
-describe('Pruebas en GifGrid', () => {
+describe('Tests in GifGrid', () => {
   const category = 'Dragon Ball';
 
-  test('Debe de mostrar el componente correctamente', () => {
+  test('The component must be displayed correctly', () => {
     // ! Este es EL valor inicial que tiene nuestro estado en useFetchGifs
     useFetchGifs.mockReturnValue({
       data: [],
@@ -19,7 +19,7 @@ describe('Pruebas en GifGrid', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  test('Debe de mostrar items cuando se caragan imágenes useFetchGifs', () => {
+  test('Must display  when loading images useFetchGifs', () => {
     const gifs = [
       {
         id: 'ABC',

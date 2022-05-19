@@ -1,12 +1,12 @@
 import { getGifs } from '../../helpers/getGifs';
 
-describe('pruebas en getGifs fetch', () => {
-  test('Debe de traer 10 elementos', async () => {
+describe('Test in getGifs fetch', () => {
+  test('It must bring 10 items', async () => {
     const gifs = await getGifs('One Punch');
     expect(gifs).toHaveLength(10);
   });
 
-  test('argumentos vacioss', async () => {
+  test('empty arguments', async () => {
     const gifs = await getGifs('');
     expect(gifs).toHaveLength(0);
   });
