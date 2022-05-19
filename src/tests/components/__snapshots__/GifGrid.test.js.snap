@@ -5,7 +5,7 @@ exports[`Pruebas en GifGrid Debe de mostrar el componente correctamente 1`] = `
   <h3
     className="animate__animated animate__fadeInRight"
   >
-    Goku
+    Dragon Ball
   </h3>
   <p
     className="animate__animated animate__flash"
